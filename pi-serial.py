@@ -24,7 +24,7 @@ def main(n_samples):
     elapsed_time = (end_time - start_time).total_seconds()
     size_of_float = np.dtype(np.float64).itemsize
     memory_required = 3 * n_samples * size_of_float / (1024**3)
-    error = my_pi-math.pi
+    error = abs(my_pi-math.pi)/math.pi
     write_to_csv([n_samples, my_pi, memory_required, elapsed_time, error])
 
 if __name__ == '__main__':
