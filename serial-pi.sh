@@ -9,4 +9,4 @@
 module load python3
 
 # Execute the task
-python pi.py 100000000
+python pi-serial.py 100000000
