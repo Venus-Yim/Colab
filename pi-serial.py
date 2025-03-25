@@ -26,4 +26,5 @@ def main(n_samples):
     write_to_csv([n_samples, my_pi, memory_required, elapsed_time, error])
 
 if __name__ == '__main__':
-    main()
+    n_samples = int(sys.argv[1])
+    main(n_samples)
