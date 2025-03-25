@@ -2,6 +2,7 @@ import numpy as np
 import sys
 import datetime
 import math
+import csv
 
 def inside_circle(total_count):
     x = np.random.uniform(size=total_count)
