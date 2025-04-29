@@ -28,7 +28,7 @@ def main(n_samples):
     size_of_float = np.dtype(np.float64).itemsize
     memory_required = 3 * n_samples * size_of_float / (1024**3)
     error = abs(area-12.5*math.pi)/(12.5*math.pi)
-    write_to_csv([n_samples, my_pi, memory_required, elapsed_time, error])
+    write_to_csv([n_samples, area, memory_required, elapsed_time, error])
 
 if __name__ == '__main__':
     n_samples = int(sys.argv[1])
