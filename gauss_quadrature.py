@@ -21,7 +21,7 @@ def composite_gauss_quadrature(f, a, b, n_intervals, n_points):
     return total
 
 
-def write_to_csv(data，n_points):
+def write_to_csv(data,n_points):
     with open('output{}.csv'.format(n_points + 3), mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(data)
