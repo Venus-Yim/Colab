@@ -21,7 +21,7 @@ def composite_gauss_quadrature(f, a, b, n_intervals, n_points):
     return total
 
 
-def write_to_csv(data):
+def write_to_csv(data，n_points):
     with open('output{}.csv'.format(n_points + 3), mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(data)
@@ -34,7 +34,7 @@ def main(n_samples,k):
     size_of_float = np.dtype(np.float64).itemsize
     memory_required = 3 * n_samples * size_of_float / (1024**3)
     error = abs(area-12.5*math.pi)/(12.5*math.pi)
-    write_to_csv([n_samples, area, memory_required, elapsed_time, error])
+    write_to_csv([n_samples, area, memory_required, elapsed_time, error],k)
 
 if __name__ == '__main__':
     n_samples,k = int(sys.argv[1]),int(sys.argv[2])
