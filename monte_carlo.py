@@ -5,7 +5,7 @@ import math
 import csv
 
 def f(x):
-    return 10 * np.sin(np.pi / 5 * x)
+    return 10 * np.sin(np.pi / 5 * x) * np.pi
 
 def monte_carlo(f, a, b, n_samples):
     x_random = np.random.uniform(a, b, n_samples)
@@ -25,7 +25,7 @@ def main(n_samples):
     elapsed_time = (end_time - start_time).total_seconds()
     size_of_float = np.dtype(np.float64).itemsize
     memory_required = 2 * n_samples * size_of_float / (1024**3)
-    exact_value = 100/ math.pi
+    exact_value = 100
     error = abs(area - exact_value) / exact_value
     write_to_csv([n_samples, area, memory_required, elapsed_time, error])
 
