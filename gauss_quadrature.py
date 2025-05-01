@@ -22,7 +22,7 @@ def composite_gauss_quadrature(f, a, b, n_intervals, n_points):
 
 
 def write_to_csv(data):
-    with open('output{}.csv'.format(npoints + 3), mode='a', newline='') as file:
+    with open('output{}.csv'.format(n_points + 3), mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(data)
 
