@@ -14,7 +14,7 @@ def monte_carlo(f, a, b, n_samples):
     return (b - a) * average_value
 
 def write_to_csv(data):
-    with open('output_mc.csv', mode='a', newline='') as file:
+    with open('output9.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(data)
 
