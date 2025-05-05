@@ -12,7 +12,7 @@ true_value = mp.mpf('12.5') * mp.pi
 
 # 被积函数定义
 def f(x):
-    return 10 * np.sqrt(1 - (x**2) / 25)
+    return 10 * mp.sqrt(1 - (x**2) / 25)
 
 # 复合高斯-勒让德求积（使用 mpmath）
 def composite_gauss_quadrature(f, a, b, n_intervals, n_points):
