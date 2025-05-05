@@ -2,16 +2,17 @@ import sys
 import datetime
 import csv
 from mpmath import mp, mpf, quadgl
+import math
 
 # 设置高精度小数位数（例如 60 位）
 mp.dps = 60
 
 # 精确积分值（用于误差计算）
-true_value = mpf('682.5')
+true_value = mp.mpf('12.5') * mp.pi
 
 # 被积函数定义
 def f(x):
-    return x**5 - 5*x**4 + 10*x**3 - 10*x**2 + 5*x - 1
+    return 10 * np.sqrt(1 - (x**2) / 25)
 
 # 复合高斯-勒让德求积（使用 mpmath）
 def composite_gauss_quadrature(f, a, b, n_intervals, n_points):
@@ -30,7 +31,7 @@ def composite_gauss_quadrature(f, a, b, n_intervals, n_points):
 
 # 写入 CSV 文件
 def write_to_csv(data, n_points):
-    with open(f'output{n_points + 3}mp.csv', mode='a', newline='') as file:
+    with open(f'output{n_points + 3}mp2.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(data)
 
