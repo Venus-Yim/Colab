@@ -5,7 +5,7 @@ from mpmath import mp, mpf, quadgl
 import math
 
 # 设置高精度小数位数（例如 60 位）
-mp.dps = 30
+mp.dps = 20
 
 # 精确积分值（用于误差计算）
 true_value = mp.mpf('12.5') * mp.pi
